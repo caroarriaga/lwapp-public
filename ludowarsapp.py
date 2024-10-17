@@ -95,18 +95,21 @@ if st.session_state.boton_buscar:
 
       col1, col2, col3 = st.columns([.2,.2,.8])
 
-      for round in totalGameRounds:
-         col1.markdown(f"Ronda {round}")
+      for ix,round in enumerate(roundNames):
+         st.markdown(f"**{round}:**&nbsp;&nbsp;&nbsp;&nbsp;{startTime[ix]}&nbsp;&nbsp;&nbsp;&nbsp;**{st.session_state.itinerario_jugador.loc[:,round].item()}**")
 
-      for t in startTime:
-         col2.markdown(t)
+      # for round in totalGameRounds:
+      #    col1.markdown(f"Ronda {round}")
 
-      for game in roundNames:
-         col3.markdown(st.session_state.itinerario_jugador.loc[:,game].item())
+      # for t in startTime:
+      #    col2.markdown(t)
 
-      st.markdown(f"### :trophy: **Final** {final[1]}  {final[0]} :trophy:")
+      # for game in roundNames:
+      #    col3.markdown(st.session_state.itinerario_jugador.loc[:,game].item())
 
-      st.markdown("#### Premiación 8:15 PM")
+      st.markdown(f"#### :trophy: **Final** {final[1]}  {final[0]} :trophy:")
+
+      st.markdown("##### Premiación 8:15 PM")
 
    with tab2:
 
@@ -149,4 +152,4 @@ if st.session_state.boton_buscar:
 else:
    st.title(f"LudoWars 4ta Edicion")
    st.subheader("Juega para ganar, juega para divertirte, juega en LudoWars")
-   st.markdown("Agrega tus datos para mostrarte el itinario. ¡Éxito en el torneo!")
+   st.markdown("Agrega tus datos en el menú de la izquierda para mostrarte el itinario. ¡Éxito en el torneo!")
