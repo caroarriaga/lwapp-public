@@ -41,7 +41,7 @@ mystyle = '''
 st.markdown(mystyle, unsafe_allow_html=True)
 
 with st.sidebar:
-   st.image(r"assets\static\logo_ludowars.png")
+   st.image("assets/static/logo_ludowars.png")
    df = update_gsheet()
    itinerarios=get_itinerary()
    
