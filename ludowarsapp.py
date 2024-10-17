@@ -78,7 +78,7 @@ if st.session_state.boton_buscar:
    with tab1:
       
       st.header("Mapa")
-      st.image("assets\static\croquis.jpeg", width=400)
+      st.image("assets/static/croquis.jpeg", width=400)
 
       round=4
       gameName="Coffee Rush"
